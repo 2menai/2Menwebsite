@@ -40,7 +40,7 @@ const features = [
     ),
     title: "8-Layer Context System",
     description:
-      "Not keyword search with a chatbot on top. Our 8-layer context architecture understands domain hierarchies, relationships, and intent at a level generic AI never will.",
+      "Not keyword search with a generic AI on top. Our 8-layer context architecture understands domain hierarchies, relationships, and intent at a level generic AI never will.",
   },
   {
     icon: (

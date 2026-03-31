@@ -124,15 +124,15 @@ export default function WhyNotJustAI() {
               AI with an engineering team behind it
             </h3>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-400">
-              Most AI products hand you a chatbot and wish you luck. We give you
-              the AI <span className="text-white">plus</span> a real team that
+              Most AI products hand you a tool and wish you luck. We deliver a
+              managed intelligence service&mdash;the AI{" "}
+              <span className="text-white">plus</span> a real team that
               understands your business, your infrastructure, and your goals.
               We&apos;re constantly tuning, improving, and maintaining
               it&mdash;so the system gets smarter over time, not stale.
             </p>
             <p className="mx-auto mt-4 max-w-xl text-sm text-slate-500">
-              It&apos;s not just a chatbot. It&apos;s a managed intelligence
-              service.
+              Not a chatbot. A managed intelligence service.
             </p>
           </div>
         </ScrollFade>
