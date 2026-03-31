@@ -34,7 +34,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-navy-light py-24">
+    <section id="contact" className="bg-dark py-24">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollFade>
           <div className="grid gap-12 lg:grid-cols-2">
@@ -44,12 +44,11 @@ export default function Contact() {
                 Get in Touch
               </p>
               <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Let&apos;s talk about what you&apos;re building
+                Let&apos;s talk.
               </h2>
               <p className="mb-8 text-lg text-slate-400">
-                Tell us about your data, your domain, and the problems
-                you&apos;re trying to solve. We&apos;ll show you what&apos;s
-                possible.
+                Whether you&apos;re exploring a partnership, need
+                infrastructure, or just want to talk — we&apos;re here.
               </p>
 
               <div className="space-y-4">
@@ -73,6 +72,23 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-white">
+                      Location
+                    </div>
+                    <div className="text-sm text-slate-400">
+                      Huntsville, AL
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                   </div>
@@ -82,22 +98,6 @@ export default function Contact() {
                     </div>
                     <div className="text-sm text-slate-400">
                       Within 24 hours, usually same day
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-white">
-                      Free Consultation
-                    </div>
-                    <div className="text-sm text-slate-400">
-                      30-minute demo, no strings attached
                     </div>
                   </div>
                 </div>
@@ -140,15 +140,15 @@ export default function Contact() {
                     </div>
                     <div>
                       <label
-                        htmlFor="company"
+                        htmlFor="email"
                         className="mb-1.5 block text-sm font-medium text-slate-300"
                       >
-                        Company *
+                        Email *
                       </label>
                       <input
-                        type="text"
-                        id="company"
-                        name="company"
+                        type="email"
+                        id="email"
+                        name="email"
                         required
                         className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent"
                       />
@@ -157,54 +157,17 @@ export default function Contact() {
 
                   <div>
                     <label
-                      htmlFor="email"
-                      className="mb-1.5 block text-sm font-medium text-slate-300"
-                    >
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="timeline"
-                      className="mb-1.5 block text-sm font-medium text-slate-300"
-                    >
-                      Project Timeline
-                    </label>
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent"
-                    >
-                      <option value="" className="bg-navy-light text-white">Select Timeline</option>
-                      <option value="immediate" className="bg-navy-light text-white">Immediate (1-2 weeks)</option>
-                      <option value="short" className="bg-navy-light text-white">Short-term (1-3 months)</option>
-                      <option value="medium" className="bg-navy-light text-white">Medium-term (3-6 months)</option>
-                      <option value="long" className="bg-navy-light text-white">Long-term (6+ months)</option>
-                      <option value="exploring" className="bg-navy-light text-white">Just exploring</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
                       htmlFor="message"
                       className="mb-1.5 block text-sm font-medium text-slate-300"
                     >
-                      Tell us about your project *
+                      Message *
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      rows={4}
+                      rows={5}
                       required
-                      placeholder="What data are you working with? What problems are you trying to solve?"
+                      placeholder="Tell us what you're working on..."
                       className="w-full resize-y rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent"
                     />
                   </div>

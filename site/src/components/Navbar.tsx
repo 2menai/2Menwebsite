@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "Platform", href: "#platform" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Why Us", href: "#why-us" },
+  { label: "About", href: "#about" },
+  { label: "Approach", href: "#approach" },
+  { label: "Ventures", href: "#ventures" },
+  { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,14 +24,19 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy/95 backdrop-blur-md shadow-lg shadow-black/10"
+          ? "bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-xl font-bold tracking-tight">
-          <span className="text-accent">2men</span>
-          <span className="text-white">.ai</span>
+        <a href="#" className="flex items-baseline gap-2">
+          <span className="text-xl font-bold tracking-tight">
+            <span className="text-accent">2men</span>
+            <span className="text-white">.ai</span>
+          </span>
+          <span className="hidden text-xs font-medium tracking-wide text-slate-500 sm:inline">
+            AI Ventures
+          </span>
         </a>
 
         {/* Desktop links */}
@@ -39,7 +45,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                className="text-sm font-medium text-slate-400 transition-colors hover:text-white"
               >
                 {l.label}
               </a>
@@ -50,7 +56,7 @@ export default function Navbar() {
               href="#contact"
               className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/25"
             >
-              Request a Demo
+              Work With Us
             </a>
           </li>
         </ul>
@@ -75,14 +81,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-navy/98 backdrop-blur-md md:hidden">
+        <div className="border-t border-white/10 bg-dark/98 backdrop-blur-md md:hidden">
           <ul className="flex flex-col gap-1 px-6 py-4">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                  className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
                 >
                   {l.label}
                 </a>
@@ -94,7 +100,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white"
               >
-                Request a Demo
+                Work With Us
               </a>
             </li>
           </ul>
