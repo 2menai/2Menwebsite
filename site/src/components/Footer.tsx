@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 const YEAR = 2026;
 
 export default function Footer() {
@@ -5,12 +7,11 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-dark py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div>
-            <a href="#" className="text-lg font-bold tracking-tight">
-              <span className="text-accent">2men</span>
-              <span className="text-white">.ai</span>
+          <div className="flex flex-col items-center sm:items-start">
+            <a href="#" aria-label="2men.ai home">
+              <Logo className="h-7 w-auto text-white" />
             </a>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-500">
               An AI Venture Company
             </p>
           </div>

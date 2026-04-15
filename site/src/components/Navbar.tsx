@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 const links = [
   { label: "About", href: "#about" },
@@ -29,11 +30,8 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-baseline gap-2">
-          <span className="text-xl font-bold tracking-tight">
-            <span className="text-accent">2men</span>
-            <span className="text-white">.ai</span>
-          </span>
+        <a href="#" className="flex items-center gap-3" aria-label="2men.ai home">
+          <Logo className="h-8 w-auto text-white" />
           <span className="hidden text-xs font-medium tracking-wide text-slate-500 sm:inline">
             AI Ventures
           </span>
