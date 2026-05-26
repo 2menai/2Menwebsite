@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Logo from "./Logo";
+import BrandGlyph from "./BrandGlyph";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Approach", href: "#approach" },
-  { label: "Ventures", href: "#ventures" },
-  { label: "Services", href: "#services" },
+  { label: "What we do", href: "#what" },
+  { label: "Track record", href: "#track" },
+  { label: "Product", href: "#product" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -16,94 +15,75 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-3" aria-label="2men.ai home">
-          <Logo className="h-8 w-auto text-white" />
-          <span className="hidden text-xs font-medium tracking-wide text-slate-500 sm:inline">
-            AI Ventures
-          </span>
+    <nav className={`top ${scrolled ? "scrolled" : ""}`} id="topnav">
+      <div className="container-x inner">
+        <a className="brand" href="#" aria-label="2men.ai home">
+          <BrandGlyph className="glyph" />
+          <span className="name">2men.ai</span>
         </a>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="desktop-nav">
           {links.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                className="text-sm font-medium text-slate-400 transition-colors hover:text-white"
-              >
-                {l.label}
-              </a>
+              <a href={l.href}>{l.label}</a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/25"
-            >
-              Work With Us
-            </a>
-          </li>
         </ul>
 
-        {/* Mobile menu button */}
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+        <a
+          className="btn btn-primary cta-desktop"
+          href="https://thebuildbot.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ padding: "9px 16px", fontSize: 13 }}
         >
-          <span
-            className={`h-0.5 w-6 bg-white transition-all ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
-          />
-          <span
-            className={`h-0.5 w-6 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`h-0.5 w-6 bg-white transition-all ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
-          />
-        </button>
-      </nav>
+          Visit The Build Bot →
+        </a>
 
-      {/* Mobile menu */}
+        <button
+          className={`nav-mobile-toggle ${mobileOpen ? "open" : ""}`}
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-dark/98 backdrop-blur-md md:hidden">
-          <ul className="flex flex-col gap-1 px-6 py-4">
+        <div className="nav-mobile-panel">
+          <ul>
             {links.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
-                >
+                <a href={l.href} onClick={() => setMobileOpen(false)}>
                   {l.label}
                 </a>
               </li>
             ))}
-            <li className="pt-2">
+            <li className="cta">
               <a
-                href="#contact"
+                className="btn btn-primary"
+                href="https://thebuildbot.ai"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white"
+                style={{ display: "inline-flex" }}
               >
-                Work With Us
+                Visit The Build Bot →
               </a>
             </li>
           </ul>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

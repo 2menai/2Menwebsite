@@ -1,13 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Approach from "@/components/Approach";
-import HowWeOperate from "@/components/HowWeOperate";
-import Ventures from "@/components/Ventures";
-import Comparison from "@/components/Comparison";
-import Services from "@/components/Services";
-import Team from "@/components/Team";
-import CTA from "@/components/CTA";
+import WhatWeDo from "@/components/WhatWeDo";
+import TrackRecord from "@/components/TrackRecord";
+import Product from "@/components/Product";
+import WhoWeListenFor from "@/components/WhoWeListenFor";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,14 +13,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Approach />
-        <HowWeOperate />
-        <Ventures />
-        <Comparison />
-        <Services />
-        <Team />
-        <CTA />
+        <WhatWeDo />
+        <TrackRecord />
+        <Product />
+        <WhoWeListenFor />
         <Contact />
       </main>
       <Footer />

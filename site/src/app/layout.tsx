@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "2men.ai — An AI Venture Company",
+  title: "2men.ai — The company behind The Build Bot.",
   description:
-    "We build, launch, and operate AI ventures. Real infrastructure. Real expertise. We've seen this before.",
+    "2men.ai builds AI-native ventures. Tribal knowledge, without the tribal. We turn unreachable data into the substrate companies can build on. The Build Bot is our first venture.",
   keywords:
-    "AI ventures, AI company, AI infrastructure, AWS, enterprise AI, AI consulting, Huntsville AL",
+    "AI ventures, parsing, knowledge graph, AI infrastructure, AWS, enterprise AI, Huntsville AL, The Build Bot",
   openGraph: {
-    title: "2men.ai — An AI Venture Company",
+    title: "2men.ai — The company behind The Build Bot.",
     description:
-      "We build, launch, and operate AI ventures. Real infrastructure. Real expertise.",
+      "Tribal knowledge, without the tribal. We parse, standardize, build on top — then ship the products.",
     url: "https://2men.ai",
     siteName: "2men.ai",
     type: "website",
@@ -36,7 +36,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-dark text-white antialiased">{children}</body>
+      <body className="grain">{children}</body>
     </html>
   );
 }

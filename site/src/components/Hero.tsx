@@ -2,38 +2,72 @@ import ScrollFade from "./ScrollFade";
 
 export default function Hero() {
   return (
-    <section className="hero-bg relative flex min-h-screen items-center overflow-hidden bg-dark pt-20">
-      {/* Subtle glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/3 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.03] blur-3xl" />
-
-      <div className="relative mx-auto max-w-6xl px-6 py-24">
+    <section className="hero">
+      <div className="container-x">
         <ScrollFade>
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              AI is only as good as the
-              <br />
-              <span className="text-accent">concepts behind it.</span>
-            </h1>
-            <p className="mb-4 text-lg leading-relaxed text-slate-400 sm:text-xl">
-              We build and operate AI ventures — backed by real infrastructure
-              and real expertise.
-            </p>
-            <p className="mb-10 text-base font-medium text-slate-500">
-              We&apos;ve seen this before. We know what works.
-            </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="#contact"
-                className="rounded-lg bg-accent px-8 py-4 text-base font-semibold text-white transition-all hover:bg-accent-dark hover:shadow-xl hover:shadow-accent/25"
+          <div className="broadsheet">
+            <span className="section-num">§ 00</span>
+            <span>2men.ai · Huntsville, AL · est. 2025</span>
+          </div>
+          <h1>
+            Tribal knowledge,
+            <br />
+            <span className="accent">without the tribal.</span>
+          </h1>
+          <p className="deck">
+            We turn the data nobody can reach — scanned specs, handwritten
+            notes, the binders Jim used to keep on his desk — into knowledge
+            your organization can actually query. Then we build the AI on top
+            of it.
+          </p>
+          <div className="actions">
+            <a className="btn btn-primary" href="#what">
+              What we do
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
               >
-                Work With Us
-              </a>
-              <a
-                href="#ventures"
-                className="rounded-lg border border-white/10 px-8 py-4 text-base font-semibold text-slate-400 transition-all hover:border-white/25 hover:text-white"
-              >
-                Our Ventures
-              </a>
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              className="btn btn-ghost"
+              href="https://thebuildbot.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try our product · The Build Bot
+            </a>
+          </div>
+
+          <div className="meta">
+            <div className="item">
+              <div className="k">What we do</div>
+              <div className="v">Parse. Standardize. Build &amp; operate.</div>
+            </div>
+            <div className="item">
+              <div className="k">Our product</div>
+              <div className="v">
+                <a
+                  href="https://thebuildbot.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  thebuildbot.ai
+                </a>
+              </div>
+            </div>
+            <div className="item">
+              <div className="k">Where</div>
+              <div className="v">Huntsville, AL · founded 2025</div>
             </div>
           </div>
         </ScrollFade>
