@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="foot">
       <div className="container-x row">
-        <a className="brand" href="#" aria-label="2men.ai home">
+        <a className="brand" href="/" aria-label="2men.ai home">
           <BrandGlyph className="glyph" width={22} height={22} />
           <span className="name">2men.ai</span>
         </a>

@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className={`top ${scrolled ? "scrolled" : ""}`} id="topnav">
       <div className="container-x inner">
-        <a className="brand" href="#" aria-label="2men.ai home">
+        <a className="brand" href="/" aria-label="2men.ai home">
           <BrandGlyph className="glyph" />
           <span className="name">2men.ai</span>
         </a>
