@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import BrandGlyph from "./BrandGlyph";
 
 const links = [
-  { label: "Principles", href: "#principles" },
-  { label: "Offerings", href: "#offerings" },
-  { label: "About", href: "#about" },
+  { label: "Principles", href: "/#principles" },
+  { label: "Offerings", href: "/#offerings" },
+  { label: "About", href: "/#about" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
 
         <a
           className="btn btn-primary cta-desktop"
-          href="#contact"
+          href="/#contact"
           style={{ padding: "9px 16px", fontSize: 13 }}
         >
           Contact us
@@ -69,7 +70,7 @@ export default function Navbar() {
             <li className="cta">
               <a
                 className="btn btn-primary"
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 style={{ display: "inline-flex" }}
               >

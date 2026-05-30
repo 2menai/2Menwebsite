@@ -17,7 +17,10 @@ export default function Footer() {
           >
             The Build Bot
           </a>
-          <a className="bblink" href="#contact">
+          <a className="bblink" href="/careers">
+            Careers
+          </a>
+          <a className="bblink" href="/#contact">
             Contact
           </a>
         </nav>
