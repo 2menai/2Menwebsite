@@ -1,12 +1,11 @@
-import BrandGlyph from "./BrandGlyph";
+import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   return (
     <footer className="foot">
       <div className="container-x row">
         <a className="brand" href="/" aria-label="2men.ai home">
-          <BrandGlyph className="glyph" width={22} height={22} />
-          <span className="name">2men.ai</span>
+          <BrandLogo className="brand-logo" height={20} />
         </a>
         <nav style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
           <a

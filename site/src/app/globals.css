@@ -129,6 +129,7 @@ nav.top.scrolled {
 nav.top .inner { display: flex; height: 64px; align-items: center; justify-content: space-between; }
 nav.top a.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-ink); }
 nav.top a.brand .glyph { width: 24px; height: 24px; filter: drop-shadow(0 0 12px rgba(59,130,246,.5)); }
+.brand-logo { display: block; filter: drop-shadow(0 0 12px rgba(59,130,246,.35)); }
 nav.top a.brand .name { font-family: var(--font-sans); font-weight: 700; font-size: 18px; letter-spacing: -.02em; }
 nav.top ul { list-style: none; display: flex; gap: 26px; margin: 0; padding: 0; }
 nav.top ul a { font-size: 13.5px; font-weight: 500; color: var(--color-muted); text-decoration: none; transition: color .15s; }

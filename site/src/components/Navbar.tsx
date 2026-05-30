@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import BrandGlyph from "./BrandGlyph";
+import BrandLogo from "./BrandLogo";
 
 const links = [
   { label: "Principles", href: "/#principles" },
@@ -25,8 +25,7 @@ export default function Navbar() {
     <nav className={`top ${scrolled ? "scrolled" : ""}`} id="topnav">
       <div className="container-x inner">
         <a className="brand" href="/" aria-label="2men.ai home">
-          <BrandGlyph className="glyph" />
-          <span className="name">2men.ai</span>
+          <BrandLogo className="brand-logo" height={22} />
         </a>
 
         <ul className="desktop-nav">
