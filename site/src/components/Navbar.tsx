@@ -4,10 +4,9 @@ import { useState, useEffect } from "react";
 import BrandGlyph from "./BrandGlyph";
 
 const links = [
-  { label: "What we do", href: "#what" },
-  { label: "Track record", href: "#track" },
-  { label: "Product", href: "#product" },
-  { label: "Contact", href: "#contact" },
+  { label: "Principles", href: "#principles" },
+  { label: "Offerings", href: "#offerings" },
+  { label: "About", href: "#about" },
 ];
 
 export default function Navbar() {
@@ -39,12 +38,10 @@ export default function Navbar() {
 
         <a
           className="btn btn-primary cta-desktop"
-          href="https://thebuildbot.ai"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#contact"
           style={{ padding: "9px 16px", fontSize: 13 }}
         >
-          Visit The Build Bot →
+          Contact us
         </a>
 
         <button
@@ -72,13 +69,11 @@ export default function Navbar() {
             <li className="cta">
               <a
                 className="btn btn-primary"
-                href="https://thebuildbot.ai"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 onClick={() => setMobileOpen(false)}
                 style={{ display: "inline-flex" }}
               >
-                Visit The Build Bot →
+                Contact us
               </a>
             </li>
           </ul>

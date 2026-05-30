@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "2men.ai — The company behind The Build Bot.",
+  title: "2men.ai — The shortcut to private, enterprise AI",
   description:
-    "2men.ai builds AI-native ventures. Tribal knowledge, without the tribal. We turn unreachable data into the substrate companies can build on. The Build Bot is our first venture.",
-  keywords:
-    "AI ventures, parsing, knowledge graph, AI infrastructure, AWS, enterprise AI, Huntsville AL, The Build Bot",
+    "Private, enterprise AI that cuts past the hype. Consulting and The Build Bot — built and run by senior operators in Huntsville, AL.",
   openGraph: {
-    title: "2men.ai — The company behind The Build Bot.",
+    title: "2men.ai — The shortcut to private, enterprise AI",
     description:
-      "Tribal knowledge, without the tribal. We parse, standardize, build on top — then ship the products.",
+      "Private, enterprise AI that cuts past the hype. Consulting and The Build Bot — built and run by senior operators in Huntsville, AL.",
     url: "https://2men.ai",
     siteName: "2men.ai",
     type: "website",

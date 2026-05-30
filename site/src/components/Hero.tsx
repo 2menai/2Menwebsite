@@ -1,28 +1,71 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import ScrollFade from "./ScrollFade";
 
+const PHRASES = ["better processes.", "great ideas.", "AI for your team.", "good IT."];
+const TYPE = 65;
+const ERASE = 34;
+const HOLD = 1500;
+const GAP = 320;
+
 export default function Hero() {
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let p = 0;
+    let i = 0;
+    let erasing = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
+    const tick = () => {
+      const word = PHRASES[p];
+      if (!erasing) {
+        el.textContent = word.slice(0, i + 1);
+        i++;
+        if (i === word.length) {
+          erasing = true;
+          timer = setTimeout(tick, HOLD);
+          return;
+        }
+        timer = setTimeout(tick, TYPE);
+      } else {
+        el.textContent = word.slice(0, i - 1);
+        i--;
+        if (i === 0) {
+          erasing = false;
+          p = (p + 1) % PHRASES.length;
+          timer = setTimeout(tick, GAP);
+          return;
+        }
+        timer = setTimeout(tick, ERASE);
+      }
+    };
+    tick();
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <section className="hero">
+    <section className="hero" data-screen-label="Hero">
       <div className="container-x">
         <ScrollFade>
           <div className="broadsheet">
-            <span className="section-num">§ 00</span>
-            <span>2men.ai · Huntsville, AL · est. 2025</span>
+            <span>2men.ai · Private enterprise AI · Huntsville, AL</span>
           </div>
           <h1>
-            Tribal knowledge,
-            <br />
-            <span className="accent">without the tribal.</span>
+            <span className="tw-line">The shortcut to</span>
+            <span className="tw-line">
+              <span ref={ref} className="tw-rotate" />
+              <span className="tw-caret" aria-hidden="true" />
+            </span>
           </h1>
-          <p className="deck">
-            We turn the data nobody can reach — scanned specs, handwritten
-            notes, the binders Jim used to keep on his desk — into knowledge
-            your organization can actually query. Then we build the AI on top
-            of it.
-          </p>
-          <div className="actions">
-            <a className="btn btn-primary" href="#what">
-              What we do
+          <div className="actions" style={{ marginTop: 8 }}>
+            <a className="btn btn-primary" href="#contact">
+              Contact us
               <svg
                 width="14"
                 height="14"
@@ -38,37 +81,9 @@ export default function Hero() {
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </a>
-            <a
-              className="btn btn-ghost"
-              href="https://thebuildbot.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Try our product · The Build Bot
+            <a className="btn btn-ghost" href="#offerings">
+              See what we do
             </a>
-          </div>
-
-          <div className="meta">
-            <div className="item">
-              <div className="k">What we do</div>
-              <div className="v">Parse. Standardize. Build &amp; operate.</div>
-            </div>
-            <div className="item">
-              <div className="k">Our product</div>
-              <div className="v">
-                <a
-                  href="https://thebuildbot.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  thebuildbot.ai
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="k">Where</div>
-              <div className="v">Huntsville, AL · founded 2025</div>
-            </div>
           </div>
         </ScrollFade>
       </div>

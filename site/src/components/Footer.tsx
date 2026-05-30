@@ -8,14 +8,19 @@ export default function Footer() {
           <BrandGlyph className="glyph" width={22} height={22} />
           <span className="name">2men.ai</span>
         </a>
-        <a
-          className="bblink"
-          href="https://thebuildbot.ai"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit The Build Bot, our first venture →
-        </a>
+        <nav style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
+          <a
+            className="bblink"
+            href="https://thebuildbot.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Build Bot
+          </a>
+          <a className="bblink" href="#contact">
+            Contact
+          </a>
+        </nav>
         <span className="legal">© 2026 · Two Men and AI · Huntsville, AL</span>
       </div>
     </footer>
